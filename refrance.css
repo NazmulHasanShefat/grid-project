@@ -1,0 +1,79 @@
+/* Fonts */
+@font-face {
+  font-family: "DMSans";
+  src: url("assets/fonts/DMSans-VariableFont_opsz\,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "DMSans Regular";
+  src: url("assets/fonts/static/DMSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DMSans Medium";
+  src: url("assets/fonts/static/DMSans-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DMSans Medium";
+  src: url("assets/fonts/static/DMSans-MediumItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+.wrapper {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.container {
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "box1 box2 box2 box3"
+        "box1 box4 box5 box3"
+        "box6 box4 box5 box3"
+        "box6 box7 box8 box8";
+    padding: 20px;
+    grid-gap: 20px;
+}
+#box2 {
+    grid-area: box2;
+    background-color: #7651dc;
+}
+#box2 {
+    grid-area: box2;
+    background-color: #7651dc;
+}
+#box3{
+    grid-area: box2;
+    background-color: #7651dc;
+}
+#box4 {
+    grid-area: box2;
+    background-color: #7651dc;
+}
+#box5 {
+    grid-area: box2;
+    background-color: #7651dc;
+}
+h1{
+    font-size: clamp(1rem, 0.451rem + 1.795vw, 1.6rem);
+}
