@@ -17,7 +17,7 @@
 }
 
 .container {
-    max-width: 1140px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -36,7 +36,7 @@ body {
         "card1 card4 card5 card3"
         "card6 card4 card5 card3"
         "card6 card7 card8 card8";
-    gap: 20px;
+    gap: 16px;
 }
 
 .layout_1 {
@@ -54,8 +54,8 @@ body {
     background-color: var(--Yellow_100);
     background: var(--Yellow_100) url("./assets/images/illustration-create-post.webp") no-repeat;
     background-size: 78%;
-    background-position: 50% 80%;
-    min-height: 428px;
+    background-position: 50% 87%;
+    /* min-height: 350px; */
 
     h1 {
         padding: 75px 10px;
@@ -63,9 +63,10 @@ body {
         font-family: 'DM Sans', sans-serif;
         font-weight: 500;
         letter-spacing: -0.02em;
-        /* font-size: clamp(1rem, .4rem + 1.7rem, 2rem); */
-        font-size: 2.7rem;
+        font-size: clamp(1rem, .4rem + 1.7rem, 2.7rem);
+        /* font-size: 2.7rem; */
         color: var(--Black);
+
         span {
             font-style: italic;
             color: var(--Purple_500);
@@ -76,27 +77,39 @@ body {
 .layout_1 div:nth-child(1) {
     grid-area: card2;
     background-color: var(--Purple_500);
-    min-height: 329px;
     max-width: 553px;
-    h1{
+
+    h1 {
         color: #fff;
-        font-size: 4rem;
+        font-size: 3.8rem;
+        /* font-size: clamp(3.8rem 32px, 1.679rem + 1.282vw, 3.8rem); */
         font-weight: 500;
         text-align: center;
         line-height: 60px;
         padding-top: 30px;
-        .span_1{color: var(--Yellow_500);}
-        .span_2{font-style: italic;}
+
+        .span_1 {
+            color: var(--Yellow_500);
+        }
+
+        .span_2 {
+            font-style: italic;
+        }
     }
-    .starts{
+
+    .starts {
         display: flex;
         justify-content: center;
         background: transparent;
         border: none;
         padding: 15px 0 0 0;
-        img{width: 200px;}
+
+        img {
+            width: 200px;
+        }
     }
-    p{
+
+    p {
         text-align: center;
         color: #ffffffb6;
         font-weight: 500;
@@ -110,20 +123,24 @@ body {
     background-color: var(--Purple_100);
     max-width: 265px;
     overflow: hidden;
-    h1{
+
+    h1 {
         padding: 15px 10px;
         line-height: 30px;
     }
-     .cards4_image{
+
+    .cards4_image {
         padding: 0;
         border: none;
         background: transparent;
-        margin-left: 15px;
-        img{
-            max-height: 300px;
+        margin-left: 30px;
+
+        img {
+            max-height: 200px;
         }
     }
-    p{
+
+    p {
         font-size: 1.2rem;
         font-weight: 500;
         padding: 15px 0 0 15px;
@@ -132,48 +149,129 @@ body {
 
 .layout_1 div:nth-child(8) {
     grid-area: card6;
-    background-color: var(--Yellow_500);
-    min-height: 418px;
+    background: var(--Yellow_500) url("./assets/images/illustration-ai-content.webp") no-repeat;
+    background-size: 80%;
+    background-position-x: center;
+    background-position-y: 80%;
+
+    h1 {
+        font-weight: 500;
+        line-height: 40px;
+        font-size: 3rem;
+    }
 }
 
 .layout_1 div:nth-child(6) {
     grid-area: card7;
     background-color: var(--White);
-    border: 1px solid red;
-    padding: 20px 35px;
+    padding: 20px 20px;
+
     h1 {
-        margin: 10px 12px
+        margin: 0 12px;
+        font-size: 4rem;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .cards6_image {
+        height: 80px;
+        margin: 30px 0;
+        background: url("./assets/images/illustration-audience-growth.webp") no-repeat;
+        background-size: contain;
     }
 }
 
 .layout_1 div:nth-child(5) {
     grid-area: card8;
     background-color: var(--Purple_500);
+    display: flex;
+    align-items: center;
+    color: #fff;
+    /* padding:0 16px; */
+    /* max-height: 250px; */
+    justify-content: space-between;
+
+    h1 {
+        font-weight: 500;
+        font-size: 2.2rem
+    }
+
+    .cards5_image {
+        padding: 0;
+        margin-right: 25px;
+
+        img {
+            width: 230px;
+            height: 200px;
+        }
+    }
 }
 
 .layout_1 #cards2 {
     grid-area: card4;
     background-color: var(--White);
-    padding:15px;
-    box-shadow: var(--boxShadow);
-    .cards2_image{
+    padding: 15px;
+
+    .cards2_image {
         padding: 0;
         width: 100%;
-        height: 85px;
+        height: 65px;
         /* background-color: red; */
         background: url("./assets/images/illustration-multiple-platforms.webp") no-repeat;
         background-size: 120%;
-        background-position: start;
-        padding:0;
+        padding: 0;
         border-radius: 0;
     }
-    h1{
+
+    h1 {
         padding: 0 0 0 20px;
+        font-weight: 500;
+        line-height: 30px;
+        padding: 10px 10px;
     }
 }
 
 .layout_1 div:nth-child(3) {
     grid-area: card5;
-    background-color: var(--White);
-    border: 1px solid red;
+    background-color: var(--Yellow_500);
+    padding: 16px 20px 0 20px;
+    overflow: hidden;
+
+    h1 {
+        padding: 0;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 30px;
+    }
+
+    .cards3_image {
+        /* margin: 30px 0 0 0; */
+        width: 100%;
+        height: 100px;
+        background: url("./assets/images/illustration-consistent-schedule.webp") no-repeat;
+        background-size: cover;
+        background-position-y: 15px;
+        border-radius: 0;
+    }
 }
+/* @media screen and (max-width: 1115px) {
+    .layout_1 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "card1 card2 card2 card3"
+        "card1 card4 card5 card3"
+        "card6 card4 card5 card3"
+        "card6 card7 card8 card8";
+    grid-template-areas:
+        "card1 card2 card2 card3"
+        "card1 card4 card5 card3"
+        "card6 card4 card5 card3"
+        "card6 card7 card8 card8";
+
+    gap: 16px;
+}
+} */
