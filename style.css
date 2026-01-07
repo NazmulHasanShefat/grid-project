@@ -13,8 +13,10 @@
 
     --White: hsl(0, 0%, 100%);
     --Black: hsl(0, 0%, 7%);
+    --boxShadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.container{
+
+.container {
     max-width: 1140px;
     margin: 0 auto;
 }
@@ -23,49 +25,154 @@ body {
     width: 100%;
     font-family: "DM Sans", sans-serif;
 }
-.layout_1{
+
+.layout_1 {
     display: grid;
     height: auto;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto;
-    grid-template-areas: 
-    "card1 card2 card2 card3"
-    "card1 card4 card5 card3"
-    "card6 card4 card5 card3"
-    "card6 card7 card8 card8";
+    grid-template-areas:
+        "card1 card2 card2 card3"
+        "card1 card4 card5 card3"
+        "card6 card4 card5 card3"
+        "card6 card7 card8 card8";
+    gap: 20px;
 }
-.layout_1 div:nth-child(7){
+
+.layout_1 {
+    margin: 50px auto;
+
+    div {
+        border-radius: 16px;
+        padding: 20px 20px;
+    }
+}
+
+.layout_1 div:nth-child(7) {
     grid-area: card1;
+    max-width: 265px;
     background-color: var(--Yellow_100);
-    
+    background: var(--Yellow_100) url("./assets/images/illustration-create-post.webp") no-repeat;
+    background-size: 78%;
+    background-position: 50% 80%;
+    min-height: 428px;
+
+    h1 {
+        padding: 75px 10px;
+        line-height: 35px;
+        font-family: 'DM Sans', sans-serif;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        /* font-size: clamp(1rem, .4rem + 1.7rem, 2rem); */
+        font-size: 2.7rem;
+        color: var(--Black);
+        span {
+            font-style: italic;
+            color: var(--Purple_500);
+        }
+    }
 }
-.layout_1 div:nth-child(1){
+
+.layout_1 div:nth-child(1) {
     grid-area: card2;
     background-color: var(--Purple_500);
+    min-height: 329px;
+    max-width: 553px;
+    h1{
+        color: #fff;
+        font-size: 4rem;
+        font-weight: 500;
+        text-align: center;
+        line-height: 60px;
+        padding-top: 30px;
+        .span_1{color: var(--Yellow_500);}
+        .span_2{font-style: italic;}
+    }
+    .starts{
+        display: flex;
+        justify-content: center;
+        background: transparent;
+        border: none;
+        padding: 15px 0 0 0;
+        img{width: 200px;}
+    }
+    p{
+        text-align: center;
+        color: #ffffffb6;
+        font-weight: 500;
+        font-size: 1.1rem;
+        padding: 10px 0 0 0;
+    }
 }
-.layout_1 div:nth-child(4){
+
+.layout_1 div:nth-child(4) {
     grid-area: card3;
     background-color: var(--Purple_100);
+    max-width: 265px;
+    overflow: hidden;
+    h1{
+        padding: 15px 10px;
+        line-height: 30px;
+    }
+     .cards4_image{
+        padding: 0;
+        border: none;
+        background: transparent;
+        margin-left: 15px;
+        img{
+            max-height: 300px;
+        }
+    }
+    p{
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 15px 0 0 15px;
+    }
 }
-.layout_1 div:nth-child(8){
+
+.layout_1 div:nth-child(8) {
     grid-area: card6;
     background-color: var(--Yellow_500);
+    min-height: 418px;
 }
-.layout_1 div:nth-child(6){
+
+.layout_1 div:nth-child(6) {
     grid-area: card7;
     background-color: var(--White);
     border: 1px solid red;
+    padding: 20px 35px;
+    h1 {
+        margin: 10px 12px
+    }
 }
-.layout_1 div:nth-child(5){
+
+.layout_1 div:nth-child(5) {
     grid-area: card8;
     background-color: var(--Purple_500);
 }
-.layout_1 div:nth-child(2){
+
+.layout_1 #cards2 {
     grid-area: card4;
     background-color: var(--White);
-    border: 1px solid red;
+    padding:15px;
+    box-shadow: var(--boxShadow);
+    .cards2_image{
+        padding: 0;
+        width: 100%;
+        height: 85px;
+        /* background-color: red; */
+        background: url("./assets/images/illustration-multiple-platforms.webp") no-repeat;
+        background-size: 120%;
+        background-position: start;
+        padding:0;
+        border-radius: 0;
+    }
+    h1{
+        padding: 0 0 0 20px;
+    }
 }
-.layout_1 div:nth-child(3){
+
+.layout_1 div:nth-child(3) {
     grid-area: card5;
     background-color: var(--White);
     border: 1px solid red;
